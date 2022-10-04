@@ -1,0 +1,110 @@
+@use "../base/vars" as *;
+
+.testimonials {
+  margin-bottom: 60px;
+
+  .title-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+
+    h2 {
+      max-width: 460px;
+    }
+
+    p {
+      max-width: 400px;
+      color: #606060;
+    }
+  }
+
+  &-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    position: relative;
+
+    &:after {
+      content: "";
+      height: 80px;
+      width: 80px;
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translate(50%, -50%);
+      background: url("/assets/img/testimonials/thanks-shape.svg");
+    }
+  }
+
+  &-item {
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    transition: box-shadow 0.2s linear;
+
+    .content {
+      padding: 30px;
+    }
+
+    p {
+      margin-bottom: 23px;
+    }
+
+    .author {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.6px;
+    }
+
+    .city {
+      color: $green;
+      letter-spacing: 1.15px;
+      transition: 0.2s linear color;
+    }
+
+    .img-wrapper {
+      position: relative;
+
+      img {
+        height: 200px;
+        width: 100%;
+        object-fit: cover;
+      }
+
+      .play {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        padding: 0;
+        height: 50px;
+        width: 50px;
+        display: flex;
+        align-items: center;
+        background-color: #fff;
+        border-radius: 50%;
+        cursor: pointer;
+        justify-content: center;
+        opacity: 0;
+        transition: 0.2s linear opacity;
+      }
+
+      .play img {
+        width: 15px;
+        height: 15px;
+      }
+    }
+
+    &:hover {
+      box-shadow : 0 10px 52px rgba(0, 0, 0, 0.08);
+
+      .play {
+        opacity: 1;
+      }
+
+      .city {
+        color: $accent;
+      }
+    }
+  }
+}

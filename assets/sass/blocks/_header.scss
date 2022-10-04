@@ -1,0 +1,25 @@
+@use "../base/vars" as *;
+
+header {
+  padding: 34px 0;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  nav {
+    display: flex;
+    gap: 40px;
+  }
+
+  nav a {
+    transition: 0.2s linear all;
+
+    &:hover, &.active {
+      color: $accent;
+    }
+  }
+}
+

@@ -1,0 +1,52 @@
+@use "../base/vars" as *;
+
+.cta {
+  padding: 140px 0;
+  color: #fff;
+  background: linear-gradient($bg-gray-color, $bg-gray-color) left bottom/100% 50% no-repeat;
+
+  &-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #58BEBF;
+    overflow: hidden;
+    border-radius: 20px;
+
+    > .content-col {
+      display: flex;
+      align-items: center;
+      padding: 0 92px;
+      background: url("/assets/img/cta/top-oval.svg") no-repeat top right,
+                  url("/assets/img/cta/bottom-oval.svg") no-repeat -200px bottom;
+
+      .buttons {
+        margin-top: 30px;
+        display: flex;
+        gap: 20px;
+      }
+
+      .btn.white {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+      }
+    }
+
+    > .img-col {
+      .img-wrapper {
+        margin-top: 60px;
+        background-color: #fff;
+        border-radius: 22px;
+        border: 22px solid #fff;
+        margin-left: -22px;
+        margin-bottom: -22px;
+      }
+
+      .img-wrapper img {
+        display: block;
+      }
+    }
+  }
+}
+
+

@@ -1,0 +1,14 @@
+.brands {
+  padding: 100px 0;
+
+  &-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 90px;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+  }
+}

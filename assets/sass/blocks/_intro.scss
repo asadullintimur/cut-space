@@ -1,0 +1,63 @@
+@use "../base/vars" as *;
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+
+  .content-col {
+    display: flex;
+    align-items: center;
+  }
+
+  h2 {
+    font-size: 54px;
+    margin-right: -142px;
+    position: relative;
+  }
+
+  p {
+    margin-bottom: 40px;
+  }
+
+  .img-col img {
+    height: 676px;
+    border-radius: 40px 40px 40px 0;
+  }
+
+  label {
+    border-radius: 29px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.125);
+    padding-left: 70px;
+    cursor: pointer;
+    position: relative;
+    transition: box-shadow 0.2s linear;
+
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 24px;
+      height: 18px;
+      left: 28px;
+      background: url("/assets/img/intro/mail.svg") ;
+    }
+
+    &.active {
+      box-shadow: 0 0 5px $opacity-accent;
+    }
+  }
+
+  input {
+    flex-grow: 1;
+    margin-right: 10px;
+  }
+
+  input::placeholder {
+    color: #BBBBBB;
+  }
+}
+

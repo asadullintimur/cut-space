@@ -1,0 +1,57 @@
+@use "../base/vars" as *;
+
+.footer {
+  padding: 85px 0;
+
+  &-grid {
+    display: grid;
+    grid-template-columns: 310px 1fr;
+    grid-gap: 220px;
+
+    .logo-col {
+      .logo {
+        margin-bottom: 15px;
+      }
+
+      p {
+        margin-bottom: 40px;
+      }
+
+      .social-list {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+      }
+    }
+
+    .links-col {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 80px;
+    }
+
+    .links-item {
+      h4 {
+        font-size: 21px;
+        margin-bottom: 15px;
+      }
+
+      nav {
+        display: flex;
+        flex-direction: column;
+        gap: 13px;
+      }
+
+      nav a {
+        font-size: 14px;
+        transition: 0.1s linear color;
+
+        &:hover {
+          color: $accent;
+        }
+      }
+    }
+  }
+
+
+}

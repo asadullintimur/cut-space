@@ -1,0 +1,43 @@
+.contact {
+  position: relative;
+  color: #fff;
+
+  &-grid {
+    display: grid;
+    grid-template-columns: 363px 1fr;
+    grid-gap: 170px;
+
+    .content-col {
+      display: flex;
+      align-items: flex-end;
+      padding-bottom: 55px;
+
+      p {
+        margin-bottom: 30px;
+      }
+
+      h2 {
+        margin-bottom: 20px;
+      }
+    }
+
+    .img-col {
+      img {
+        display: block;
+      }
+    }
+  }
+
+  .background {
+    position: absolute;
+    background-color: #58BEBF;
+    z-index: -1;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(100% 10%,
+            100% 100%,
+            0% 100%,
+            0% 33%);
+  }
+}
